@@ -1,0 +1,14 @@
+ion-header{
+    font-size: 25px !important;
+    & .container-header{
+        padding: 5px;
+        & .title{
+            font-size: 15px;
+            margin-top: -7px;
+        }
+        & .container-icons{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}

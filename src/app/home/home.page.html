@@ -1,20 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-toolbar class="container-icon-coink text-center">
+    <img src="https://coink.com/wp-content/uploads/2019/01/logo-c.svg" class="vc_single_image-img attachment-medium " alt="" height="129.93" width="121.72" itemprop="image">
+    <ion-text color="greenbrand">
+      <h4 class="text-hero">LA ALCANCÍA QUE SIEMPRE TE ACOMPAÑA</h4>
+    </ion-text>
+  </ion-toolbar>
+  <ion-content>
+    <ion-row>
+      <ion-col>
+        <p class="text-center graybrand ion-margin-top ion-margin-bottom">Desliza para aprender más</p>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col>
+        <ion-button (click)="goInputPhone()" expand="block" color="greenbrand" class="radius50">Registrate</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="bluebrand" class="radius50">Ingresa</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-content>
+  
 </ion-content>

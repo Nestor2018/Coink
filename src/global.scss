@@ -24,3 +24,15 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.text-center {
+    text-align: center;
+}
+
+.radius50{
+    --border-radius: 40px !important;
+}
+
+.graybrand{
+    color: var(--ion-color-graybrand)
+  }

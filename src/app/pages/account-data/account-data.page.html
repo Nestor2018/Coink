@@ -1,0 +1,116 @@
+<app-header-view title="DATOS DE TU CUENTA" position=2></app-header-view>
+<ion-content>
+  <app-descrittion 
+  *ngIf="!verifyData"
+  image="https://coink.com/wp-content/uploads/2019/03/logo-coink-d.png"
+  title="¿CUALES SON TUS DATOS?"
+  text="Ahora necesitamos saber algunos datos tuyos"
+  >
+  </app-descrittion>
+  <app-descrittion 
+  *ngIf="verifyData"
+  image="https://coink.com/wp-content/uploads/2019/03/logo-coink-d.png"
+  title="VERIFICA TUS DATOS"
+  text="Estos no son tus datos?"
+  >
+  </app-descrittion>
+  <ion-grid *ngIf="!verifyData">
+    <ion-row>
+      <ion-col col-12>
+        <ion-select interface="popover" [(ngModel)]="documentType" class="selector" position="floating" placeholder="Tipo de documento"  id="category">
+          <ion-select-option value="1">Cédula de ciudadania</ion-select-option>
+          <ion-select-option value="2">Cédula de extranjeria</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label position="floating">Numero de documento</ion-label>
+          <ion-input [(ngModel)]="documentNumber"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label  position="floating">Fecha de nacimiento</ion-label>
+          <ion-datetime [(ngModel)]="birthDate" displayFormat="YYYY/MM/DD"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label  position="floating">Fecha de expedición de documento</ion-label>
+          <ion-datetime [(ngModel)]="expeditionDate" displayFormat="YYYY/MM/DD"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-select interface="popover" [(ngModel)]="genderId" class="selector" position="floating" placeholder="Género que aparece en tu documento de identidad"  id="category">
+          <ion-select-option value="1">Masculino</ion-select-option>
+          <ion-select-option value="2">Femenino</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="sendData()" expand="block" color="greenbrand" class="radius50">Continuar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="verifyData">
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label position="floating">Primer nombre</ion-label>
+          <h3>{{firstName}}</h3>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label position="floating">Segundo nombre</ion-label>
+          <h3>{{secondName}}</h3>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label  position="floating">Primer apellido</ion-label>
+          <h3>{{firstLastName}}</h3>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label  position="floating">Segundo apellido</ion-label>
+          <h3>{{secondLastName}}</h3>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-label  position="floating">Genero</ion-label>
+          <h3>{{gender}}</h3>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="cancele" class="radius50">Cancelar</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="sendVerifyData()" expand="block" color="greenbrand" class="radius50">Continuar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

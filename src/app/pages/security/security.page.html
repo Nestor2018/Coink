@@ -1,0 +1,52 @@
+<app-header-view title="SEGURIDAD" position=3></app-header-view>
+
+<ion-content>
+  <app-descrittion 
+  image="https://coink.com/wp-content/uploads/2019/03/logo-coink-d.png"
+  title="CONFIGURA TU CUENTA"
+  text="Escribe el correo que estará vinculado a tu cuenta y crea un PIN de seguridad"
+  >
+  </app-descrittion>
+
+  <form [formGroup]="createAccount" (ngSubmit)="validateForm()">
+  <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <ion-item>
+            <ion-label position="floating">Correo electronico</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-item>
+            <ion-label position="floating">Confirmar correo electrónico</ion-label>
+            <ion-input type="email" formControlName="emailConfirmation"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-item>
+            <ion-label position="floating">PIN de seguridad</ion-label>
+            <ion-input type="password" formControlName="pin"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-item>
+            <ion-label  position="floating">Confirmar PIN de seguridad</ion-label>
+            <ion-input type="password" formControlName="pinConfirmation"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" expand="block" color="greenbrand" class="radius50">Siguiente</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

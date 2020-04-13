@@ -1,0 +1,24 @@
+.container-description{
+    display: flex;
+    margin: 40px;
+    border-bottom: solid 1px var(--ion-color-greenbrand);
+    padding-bottom: 20px;
+}
+
+.text{
+    font-size: 16px;
+    color: var(--ion-color-graybrand);
+    margin-bottom: 0;
+  
+}
+
+.title{
+    font-size: 16px;
+    color: var(--ion-color-bluebrand);
+    font-weight: bold;
+}
+
+span{
+    font-weight: bold;
+}
+

@@ -1,0 +1,20 @@
+<app-header-view title="NÚMERO DE CELULAR" position=1></app-header-view>
+
+<ion-content>
+  <app-descrittion 
+  *ngIf="screenCode == '1'"
+  image="https://coink.com/wp-content/uploads/2019/03/logo-coink-d.png"
+  text="Para comenzar, por favor ingresa"
+  textFont="tu numero celular."
+  >
+  </app-descrittion>
+  <app-descrittion 
+  *ngIf="screenCode == '2'"
+  image="https://coink.com/wp-content/uploads/2019/03/logo-coink-d.png"
+  text="Digita el codigo que recibiste via"
+  textFont="mensaje de texto al"
+  number={{phoneNumber}}
+  >
+  </app-descrittion>
+  <app-keyboard (subscribed)="phoneNumberSubscribed($event)" screenCode={{screenCode}}></app-keyboard>
+</ion-content>

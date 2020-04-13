@@ -1,0 +1,19 @@
+.button-keyboard{
+    --background: white;
+    --background-activated: var(--ion-color-medium);
+    --color-activated: var(--ion-color-greenbrand);
+    --color: var(--ion-color-bluebrand);
+    --box-shadow: none;
+    font-size: 20px;
+}
+
+.container-numbers{
+    display: flex;
+    justify-content: center;
+    & p{
+        font-size: 20px;
+        color: var(--ion-color-graybrand)
+    }
+}
+
+

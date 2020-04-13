@@ -1,0 +1,86 @@
+<ion-row>
+  <ion-col>
+    <ion-item lines="none" >
+      <ion-label class="container-numbers" *ngIf="screenCode == '1'">
+        <img src="../../../assets/flag-colombia.png" alt="" height="20px" width="20px">
+        <p>+57 {{numberPhone}}</p>
+      </ion-label>
+      <ion-label class="container-numbers" *ngIf="screenCode == '2'">
+        <p>XXXX</p>
+      </ion-label>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-button class="button-keyboard" [disabled]="disabled" expand="full" type="button" [(ngModel)]="one" (click)="addNumber(one)">
+        {{one}}
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="button-keyboard" [disabled]="disabled" expand="full" type="button" [(ngModel)]="two" (click)="addNumber(two)">
+        {{two}}
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="button-keyboard" [disabled]="disabled" expand="full" type="button" [(ngModel)]="three" (click)="addNumber(three)">
+        {{three}}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="button-keyboard" [disabled]="disabled" expand="full" type="button" [(ngModel)]="four" (click)="addNumber(four)">
+        {{four}}
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="button-keyboard" [disabled]="disabled" expand="full" type="button" [(ngModel)]="five" (click)="addNumber(five)">
+        {{five}}
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="button-keyboard" [disabled]="disabled" expand="full" type="button" [(ngModel)]="six" (click)="addNumber(six)">
+        {{six}}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="button-keyboard" [disabled]="disabled" expand="full" type="button" [(ngModel)]="seven" (click)="addNumber(seven)">
+        {{seven}}
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="button-keyboard" [disabled]="disabled" expand="full" type="button" [(ngModel)]="eight" (click)="addNumber(eight)">
+        {{eight}}
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="button-keyboard" [disabled]="disabled" expand="full" type="button" [(ngModel)]="nine" (click)="addNumber(nine)">
+        {{nine}}
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="button-keyboard" expand="full" type="button" (click)="deleteNumber()">
+        <ion-icon name="backspace-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="button-keyboard" [disabled]="disabled" expand="full" type="button" [(ngModel)]="zero" (click)="addNumber(zero)">
+        {{zero}}
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="button-keyboard" expand="full" type="button" [disabled]="!disabled" *ngIf="!disabled">
+        <ion-icon name="checkmark-circle"></ion-icon>
+      </ion-button>
+      <ion-button class="button-keyboard" expand="full" type="button" [disabled]="!disabled" *ngIf="disabled" (click)="sendPhoneNumber()">
+        <ion-icon name="checkmark-circle" color="greenbrand"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
